@@ -19,20 +19,12 @@ public class TextTyper : MonoBehaviour {
     private WinningCondition winCondition;
 
 
-    private InfoArea infoArea;
-    private Animator infoAreaAnimator;
-    public float infoAreaSpeedIncrease;
 
     void Awake()
     {
         _animator = GetComponent<Animator>();
         contentArea = GameObject.Find("Content");
         winCondition = FindObjectOfType<WinningCondition>();
-
-        infoArea = FindObjectOfType<InfoArea>();
-        infoAreaAnimator = infoArea.GetComponent<Animator>();
-
-
     }
 
     public void Init()
@@ -110,7 +102,11 @@ public class TextTyper : MonoBehaviour {
                     line.GetComponent<EventTrigger>().enabled = false;
             }
 
-            infoAreaAnimator.speed += infoAreaSpeedIncrease;
+            //Debug.Log("gm infoarea speed:" + gm.InfoAreaAnimator.speed + " | " + gm.infoAreaSpeedIncrease);
+            gm.InfoAreaAnimator.SetTrigger("fade");
+            gm.InfoAreaAnimator.speed += gm.infoAreaSpeedIncrease;
+            //Debug.Log("gm infoarea speed:" + gm.InfoAreaAnimator.speed + " | " + gm.infoAreaSpeedIncrease);
+
 
             StartCoroutine(gm.SayNextLine());
 

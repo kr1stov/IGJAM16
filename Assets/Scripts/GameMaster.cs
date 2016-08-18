@@ -49,6 +49,17 @@ public class GameMaster : MonoBehaviour {
     private WinningCondition winCondition;
 
 
+    private InfoArea infoArea;
+    private Animator infoAreaAnimator;
+    public Animator InfoAreaAnimator
+    {
+        get { return infoAreaAnimator; }
+    }
+
+    public float infoAreaSpeedIncrease;
+
+    public AnimationCurve curve;
+
 
     void Awake()
     {
@@ -60,7 +71,8 @@ public class GameMaster : MonoBehaviour {
 
         winCondition = FindObjectOfType<WinningCondition>();
 
-
+        infoArea = FindObjectOfType<InfoArea>();
+        infoAreaAnimator = infoArea.GetComponent<Animator>();
 
     }
 
@@ -68,6 +80,17 @@ public class GameMaster : MonoBehaviour {
     {
         yield return StartCoroutine(SayNextLine());
         StartCoroutine(SayNextLine());
+    }
+
+    void AnimationCurve()
+    {
+        float startTime = Time.timeSinceLevelLoad;
+        while (Time.timeSinceLevelLoad <= startTime + 3)
+        {
+            infoAreaAnimator.speed += curve.Evaluate(Time.time);
+        }
+
+
     }
 
     public IEnumerator SayNextLine()
@@ -79,10 +102,16 @@ public class GameMaster : MonoBehaviour {
             // animation
 
             // next scene
-            StartCoroutine(winCondition.ShowWinScreen());
+            //StartCoroutine(winCondition.ShowWinScreen());
+
+            AnimationCurve();
+            winCondition.LoadNextScene();
         }
         else
         {
+            bool name1DisplayedOnce = false;
+            bool name2DisplayedOnce = false;
+
             foreach (Choice choice in lines[nextLineIndex].choices)
             {
                 GameObject lineSaidObject = Instantiate(_textObject, contentArea.transform) as GameObject;
@@ -91,6 +120,9 @@ public class GameMaster : MonoBehaviour {
                 _dialogueLinesSoFar.Add(lineText);
                 lineSaidObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
+                lineSaidObject.GetComponentInChildren<EventTrigger>().enabled = false;
+
+
                 Text lineSaid = lineText.GetComponent<Text>();
                 Text lineTalker = lineName.GetComponent<Text>();
                 //lineSaid.alignment = ((lines[nextLineIndex].actorId % 2 == 0) ? TextAnchor.MiddleLeft : TextAnchor.MiddleRight);
@@ -98,17 +130,34 @@ public class GameMaster : MonoBehaviour {
                 {
                     lineSaid.fontStyle = FontStyle.Italic;
                     lineSaid.color = partnerColor;
-                    lineTalker.text = "Bab";
+                    if(!name1DisplayedOnce)
+                    { 
+                        lineTalker.text = "Bab";
+                        name1DisplayedOnce = true;
+                    }
+                    else
+                    {
+                        lineTalker.text = "";
+
+                    }
                 }
                 else
                 {
-                    lineTalker.text = "Aba";
+                    if (!name2DisplayedOnce)
+                    {
+                        lineTalker.text = "Aba";
+                        name2DisplayedOnce = true;
+                    }
+                    else
+                    {
+                        lineTalker.text = "";
+
+                    }
                 }
 
                 lineSaid.text = choice.text;
                 lineSaid.GetComponent<TextTyper>().Init();
 
-                //lineName.GetComponent<EventTrigger>().enabled = false;
 
                 yield return StartCoroutine(lineSaid.gameObject.GetComponent<TextTyper>().Speak(choice.indicator, talkDelay));
             }
