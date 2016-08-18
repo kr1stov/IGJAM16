@@ -1,7 +1,7 @@
 a0
-c	*	Das kam dir alles so bekannt vor?
+c	*	You recognized some things?
 a1
-c	+	Ja
-c	-	Nö, wieso?
+c	+	Yes
+c	-	No, why?
 a0
-c	*	Dann guckst du echt viele Pornos.}
+c	*	Maybe you watch a lot of porn 

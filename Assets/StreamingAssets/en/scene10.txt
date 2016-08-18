@@ -1,16 +1,16 @@
 a0
-c	*	Mein Wagen ist kaputt. Ich weiß gar nicht, was der hat!
+c	*	My car is broken down. I don’t know why.
 a1
-c	+	Sorry, ich muss dir leider sagen, dass dein Auto totaler Schrott ist.
-c	-	Der qualmt nicht. Also ist der noch heile.
+c	+	Sorry, your car is garbage.
+c	-	There is no smoke. I should be working again soon.
 a0
-c	-	Dann kann ich ja endlich bei "Suche Traumauto - biete Rostlaube" mitmachen.
-c	+	Ich muss doch irgendwie nach Hause kommen. Ich hab gar kein Geld dabei.
+c	-	I can finally attend the TV series „I am searching for my dream-car - I am offering a rust bucket“.
+c	+	I have to go home. No matter what. But I don’t have my money with me. 
 a1
-c	+	Mit dem Auto kannst du nicht mehr fahren. Aber ich weiß da was besseres. Komm mit.
-c	-	Ich leih dir Geld.
+c	+	You can’t drive this car anymore. But I have a great idea. Come with me.
+c	-	I will lend you money.
 a0
-c	+	Wohin bringst du mich denn?
-c	-	Ich hasse laufen.
+c	+	Where are we going?
+c	-	I hate walking.
 a1
-c	*	Passiert schon nichts.
+c	*	Nothing bad will happen…

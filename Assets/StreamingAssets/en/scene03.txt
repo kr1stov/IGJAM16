@@ -1,7 +1,7 @@
 a0
-c	*	Hi, ich bin von der Porno-Unternehmensberatung. Wie findest du das?
+c	*	Hi , I'm from the porn business consulting . How do you find that?
 a1	
-c	+	Aber wir sind doch eine anständige Druckerei!
-c	-	Geh weg, ich hab gleich Feierabend!
+c	+	But we're a decent printery!
+c	-	Go away. In a couple of minutes it is closing time.
 a0
-c	*	Mit Pornos macht man heute Geld. Und überhaupt. Du siehst auch nicht schlecht aus.
+c	*	You can make a lot of money with pron. And anyway: You do not look bad either.

@@ -1,10 +1,10 @@
 a0
-c	*	Das ist ein aufregendes Auto!
+c	*	Your car is exciting.
 a1
-c	-	Soll ich dich auf eine Spritztour mitnehmen?
-c	+	Ich hab auch einen aufregenden Job und bin ein aufregender Typ.
+c	-	Should I take you on a joyride?
+c	+	I also got an exciting job and I am exciting as well.
 a0
-c	+	Das gefällt mir! Willst du mal in meinen Apfel beißen?
-c	-	Du Proll.
+c	+	I like that! Would you like to take a bite of my apple?
+c	-	You are a poser.
 a1
-c	*	Der ist aber lecker. Ist der Apfel so gut oder liegt es an dir?
+c	*	Very tasty. Do you taste just as good as the apple?

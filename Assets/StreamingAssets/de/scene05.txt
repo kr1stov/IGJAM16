@@ -8,9 +8,9 @@ c	+	Ich wollte wirklich lesen.
 c	-	Du hast mich ertappt.
 a1
 c	+	Aber du kannst nicht lesen.
-c	-	Gestern konntest du noch nicht lesen.
+c	-	Wow, das hast du ja schnell gelernt.
 a0
-c	+	Ich wollte wirklich lesen
+c	+	Ich wollte wirklich lesen.
 c	-	Du hast mich erwischt!
 a1
 c	*	Die Bildung kriegst du von mir. Indem du ordentlich gefickt wirst.

@@ -1,29 +1,29 @@
 a0
-c	*	Ich hätte gerne ein Schnitzel mit Zwiebeln.
+c	*	I like to have Schnitzel with onions.
 a1
-c	+	Ein Zwiebel-Schnitzel?
-c	-	Das ist aus.
+c	+	An Onion-Schnitzel?
+c	-	That’s fine.
 a0
-c	+	Nein. Ein Schnitzel mit Zwiebeln. Da können auch ein paar Champignons drauf sein.
-c	-	Genau
+c	+	No. A Schnitzel with Onions. And I like to have some mushrooms with it.
+c	-	Exactly.
 a1
-c	+	Ein Jägerschnitzel?
-c	-	Das haben wir nicht.
+c	+	A Jägerschnitzel?
+c	-	We don’t serve this..
 a0
-c	-	Genau.
-c	+	Nein. Ein Wiener Schnitzel mit Zwiebeln und Champignons.
+c	-	Exactly.
+c	+	No. A Wiener Schnitzel with onions and mushrooms.
 a1
-c	+	Ok. Ein Wiener Schnitzel mit Zwiebeln und Champignons.
-c	-	Das haben wir nicht.
+c	+	Ok. A Wiener Schnitzel with onions and mushrooms.
+c	-	We don’t serve this.
 a0
-c	*	Und einen kalten Engel.
+c	*	And a cold angel drink.
 a1
-c	+	Ich dreh die Heizung runter. Und dann bekommen Sie Ihren kalten Engel.
-c	-	Den gibt es erst ab 18 Uhr.
+c	+	I will turn off the heating. And you will get your cold angel soon.
+c	-	We only serve it from 18:00.
 a0
-c	*	Ich will meinen kalten Engel.	
+c	*	I want my cold angel.	
 a1
-c	+	Ich kann Ihnen auch eine heiße Muschi servieren.
-c	-	Kalter Engel, kommt sofort!
+c	+	I can also serve you a hot pussy.
+c	-	Ok, a cold angel.
 a0
-c	*	Dann können wir auch mit der heißen Muschi anfangen!
+c	*	We could also start with that hot pussy.
