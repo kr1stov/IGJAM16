@@ -19,8 +19,6 @@ public class GameMaster : MonoBehaviour {
         public string text;
     }
 
-    public Object dialogue;
-
     public GameObject _textObject;
 
     public List<DialogLine> lines = new List<DialogLine>();
@@ -31,9 +29,21 @@ public class GameMaster : MonoBehaviour {
     private string lang;
 
     private int nextSceneIndex = 0;
+    public int NextSceneIndex {
+        get { return nextSceneIndex; }
+        set { nextSceneIndex = value; }
+    }
     private ContentLoader contentLoader;
 
-    public List<GameObject> texts;
+    private List<GameObject> _dialogueLinesSoFar;
+
+    public List<GameObject> DialogueLinesSoFar
+    {
+        get { return _dialogueLinesSoFar; }
+    }
+
+    public Canvas secondCanvas;
+    private WinningCondition winCondition;
 
     void Awake()
     {
@@ -41,7 +51,9 @@ public class GameMaster : MonoBehaviour {
         lang = PlayerPrefs.GetString("IGJAM16_LANG", "de");
         contentLoader = FindObjectOfType<ContentLoader>();
         InitScene(contentLoader.Scenes[nextSceneIndex]);
-        texts = new List<GameObject>();
+        _dialogueLinesSoFar = new List<GameObject>();
+
+        winCondition = FindObjectOfType<WinningCondition>();
 
     }
 
@@ -53,13 +65,12 @@ public class GameMaster : MonoBehaviour {
 
     public IEnumerator SayNextLine()
     {
-        if(nextLineIndex > lines.Count -1)
+        if (nextLineIndex > lines.Count -1)
         {
             // animation
 
             // next scene
-            PlayerPrefs.SetInt("IGJAM16_SCENE", ++nextSceneIndex);
-            SceneManager.LoadScene("Transition");
+            StartCoroutine(winCondition.ShowWinScreen());
         }
         else
         { 
@@ -67,7 +78,7 @@ public class GameMaster : MonoBehaviour {
             foreach(Choice choice in lines[nextLineIndex].choices)
             {
                 GameObject lineSaidObject = Instantiate(_textObject, contentArea.transform) as GameObject;
-                texts.Add(lineSaidObject);
+                _dialogueLinesSoFar.Add(lineSaidObject);
                 lineSaidObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
                 Text lineSaid = lineSaidObject.GetComponent<Text>();

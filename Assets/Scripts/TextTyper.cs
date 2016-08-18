@@ -15,11 +15,14 @@ public class TextTyper : MonoBehaviour {
     public float _animationSpeedDelta;
 
     private GameObject contentArea;
+
+    private WinningCondition winCondition;
     
     void Awake()
     {
         _animator = GetComponent<Animator>();
         contentArea = GameObject.Find("Content");
+        winCondition = FindObjectOfType<WinningCondition>();
     }
 
     public void Init()
@@ -66,15 +69,18 @@ public class TextTyper : MonoBehaviour {
 
     public void OnClick()
     {
-        if(_indicator == "+")
+        GameMaster gm = FindObjectOfType<GameMaster>();
+
+
+        if (_indicator == "+")
         {
             _textObject.color = Color.green;
 
-            GameMaster gm = FindObjectOfType<GameMaster>();
 
-            foreach (GameObject text in gm.texts)
+            foreach (GameObject line in gm.DialogueLinesSoFar)
             {
-                text.GetComponent<EventTrigger>().enabled = false;
+                if(line.GetComponent<EventTrigger>().enabled)
+                    line.GetComponent<EventTrigger>().enabled = false;
             }
 
             StartCoroutine(gm.SayNextLine());
@@ -83,6 +89,11 @@ public class TextTyper : MonoBehaviour {
         else if(_indicator == "-")
         {
             _textObject.color = Color.red;
+
+            StartCoroutine(winCondition.ShowFailScreen());
+
         }
     }
+
+
 }

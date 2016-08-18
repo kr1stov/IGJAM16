@@ -18,14 +18,12 @@ public class ContentLoader : MonoBehaviour {
     }
 
     // Use this for initialization
-	IEnumerator Start () {
+	void Start () {
         DontDestroyOnLoad(gameObject);
 
         Debug.Log("sceneIndex just before content load: " + Time.timeSinceLevelLoad);
-        yield return StartCoroutine(LoadContent());
+        StartCoroutine(LoadContent());
         Debug.Log("sceneIndex just after content load: "+ Time.timeSinceLevelLoad);
-
-
     }
 
     IEnumerator LoadContent()
