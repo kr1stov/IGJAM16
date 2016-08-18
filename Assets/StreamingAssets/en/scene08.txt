@@ -3,27 +3,37 @@ c	*	I like to have Schnitzel with onions.
 a1
 c	+	An Onion-Schnitzel?
 c	-	That’s fine.
+c	-	The greatest Schnitzel on earth you can only get in Austria.
 a0
 c	+	No. A Schnitzel with Onions. And I like to have some mushrooms with it.
 c	-	Exactly.
+c	-	I am skipping the Schnitzel. Just serve me the onion with the mushrooms.
 a1
 c	+	A Jägerschnitzel?
 c	-	We don’t serve this..
+c	-	A Jägerschnitzel? Do you want to leave your hunter starving?
 a0
 c	-	Exactly.
 c	+	No. A Wiener Schnitzel with onions and mushrooms.
+c	-	No. Do you have any recommendations for me?
 a1
 c	+	Ok. A Wiener Schnitzel with onions and mushrooms.
 c	-	We don’t serve this.
 a0
-c	*	And a cold angel drink.
+c	+	And I like to have a cold angel drink.
+c	-	Can you get me a beer?
+c	-	And a Sex on the beach, please.
 a1
 c	+	I will turn off the heating. And you will get your cold angel soon.
 c	-	We only serve it from 18:00.
 a0
-c	*	I want my cold angel.	
+c	+	I want my cold angel.
+c	-	I will also take a hot angel.
+c	-	I don’t care. Sometimes I want an angel.
 a1
 c	+	I can also serve you a hot pussy.
 c	-	Ok, a cold angel.
+c	-	The kitchen is already closed
 a0
-c	*	We could also start with that hot pussy.
+c	+	We could also start with that hot p***y.
+c	-	I never get what I have originally ordered.

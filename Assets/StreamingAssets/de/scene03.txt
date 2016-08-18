@@ -8,7 +8,7 @@ a0
 c	+	Aber wir sind doch ein anständiger Betrieb!
 c	-	Geh weg, ich hab gleich Feierabend!
 c	-	Zieh dich aus, ich hab gleich Feierabend!
-a0
+a1
 c	+	Mit Pornos macht man heute viel Geld. Und überhaupt. Du siehst auch nicht schlecht aus.
 c	-	Anständig? Dann kannst du es mir auch anständig besorgen!
 c	-	Langweilig!

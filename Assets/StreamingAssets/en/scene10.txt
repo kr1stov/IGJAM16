@@ -3,14 +3,18 @@ c	*	My car is broken down. I don’t know why.
 a1
 c	+	Sorry, your car is garbage.
 c	-	There is no smoke. I should be working again soon.
+c	-	I am not good with cars. But I am excellent with female car drivers.
 a0
 c	-	I can finally attend the TV series „I am searching for my dream-car - I am offering a rust bucket“.
-c	+	I have to go home. No matter what. But I don’t have my money with me. 
+c	+	I have to go home. No matter what. But I don’t have my money with me.
+c	-	Can I have a lift? 
 a1
 c	+	You can’t drive this car anymore. But I have a great idea. Come with me.
 c	-	I will lend you money.
+c	-	You are good looking. You can also hitch-hike home. Someone will take care of you, I am sure. 
 a0
 c	+	Where are we going?
 c	-	I hate walking.
 a1
-c	*	Nothing bad will happen…
+c	+	We will be having lots of fun.
+c	-	We are going on a paper chase.

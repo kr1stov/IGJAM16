@@ -3,11 +3,11 @@ c	*	Hello is there anybody? I am on the hunt for fresh eggs!
 a1
 c	+	We just had a chicken feast. Here there are no more chicken. All dead.
 c	-	Sure. How many?
+c	-	Do I look like a chicken?
 a0
 c	-	I actually wanted to become vegan anyway.
 c	+	So you can’t help me? What should I do now?
 a1
-c	+	Ok. I got two eggs left.
+c	+	Ok. I got two eggs left. Do you want me to show them to you?
 c 	-	You can go on searching for eggs somewhere else.
-a0
-c	*	Do you want to show them to me?
+c	-	I heard there are many eggs around during easter holiday.

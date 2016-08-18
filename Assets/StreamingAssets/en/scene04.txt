@@ -3,8 +3,12 @@ c	*	Your car is exciting.
 a1
 c	-	Should I take you on a joyride?
 c	+	I also got an exciting job and I am exciting as well.
+c	-	I don’t even have a car.
 a0
 c	+	I like that! Would you like to take a bite of my apple?
 c	-	You are a poser.
+c	-	That sounds exciting.
 a1
-c	*	Very tasty. Do you taste just as good as the apple?
+c	+	Very tasty. Do you taste just as good as the apple?
+c	-	Adam and Eve also fell for this saying. So do I. 
+c	-	Apples make me suffer from flatulence.

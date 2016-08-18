@@ -1,5 +1,8 @@
 a0
 c	*	I just wanted to try on the uniform.
 a1
-c	+	Ok, come with me. ALERT!
 c	-	Good thing, today is dress rehearsal!
+c	-	Carnival has not even started.
+c	-	Fasching has not even started either.
+c	+	Ok, come with me. ALERT!
+c	-	Great thing, that I hired some guys who could lift a bed just for this unexpected situation.

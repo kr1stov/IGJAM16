@@ -3,3 +3,5 @@ c	*	You are very smelly. Stop farting now!
 a1
 c	+	Lick it. Lick the cheese from my sandwich!
 c	-	Otherwise I can’t cum.
+c	-	It wasn’t me. It was you.
+c	-	Man, the dog ate something really bad.
