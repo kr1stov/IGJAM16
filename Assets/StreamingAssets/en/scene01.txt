@@ -1,8 +1,8 @@
 a0	
-c	*	Warum liegt hier eigentlich Stroh rum?
+c	*	Why is hay laying on the ground?
 a1	
-c	+	Warum hast du eine Maske auf?
-c	-	Weil is so.
+c	+	Why are you wearing a mask anyway?
+c	-	Because reasons.
 a0	
-c	-	Warum hast du so eine tiefe Stimme?
-c	+	Ja dann blas mir doch einen.
+c	-	Why is your voice so deep?
+c	+	Just go on and give me a blow-job.

@@ -1,16 +1,16 @@
 a0
-c	*	Ich wollte gerade was lesen. Irgendwoher muss man seine Bildung doch bekommen.
+c	*	I wanted to read something. You need to gain your knowledge somehow.
 a1
-c	-	Ok. Wir können ja zusammen lesen.
-c	+	Du kannst doch noch nicht mal das ABC.
+c	-	Ok. We could read together. 
+c	+	You can not even do the ABC.
 a0
-c	+	Ich wollte wirklich lesen.
-c	-	Du hast mich ertappt.
+c	+	I really wanted to read.
+c	-	You got me.
 a1
-c	+	Aber du kannst nicht lesen.
-c	-	Gestern konntest du noch nicht lesen.
+c	+	But you can’t read.
+c	-	Wow, you have learned it very fast.
 a0
-c	+	Ich wollte wirklich lesen
-c	-	Du hast mich erwischt!
+c	+	I really wanted to read.
+c	-	You got me.
 a1
-c	*	Die Bildung kriegst du von mir. Indem du ordentlich gefickt wirst.
+c	*	I’ll teach you some things. By fucking you.

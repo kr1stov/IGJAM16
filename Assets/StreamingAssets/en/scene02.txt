@@ -1,15 +1,15 @@
 a0
-c	*	Was machen wir nur mit dem angebrochenen Nachmittag?
+c	*	What shall we do with this late afternoon?
 a1
-c	+	Es regnet unheimlich draußen, mit Wegfahren wird wohl nichts. Aber mir kommt da eine Idee...
-c	-	Keine Ahnung. Lass mal chillen.
+c	+	It’s pouring rain outside, so we should not leave. But I already have an other great idea…
+c	-	I don’t know. Let’s chill.
 a0
-c	+	Da bin ich aber gespannt!
-c	-	Du hast immer doofe Ideen...
+c	+	I am so exited.
+c	-	You always got bad ideas.
 a1
-c	*	Meine Freunde waren total begeistert von dir. Die können heute ja vorbei kommen.
+c	*	My friends raved about you. They would like to come by today.
 a0
-c	+	Und? Was wollen die dann hier?
-c	-	Ich hab ja gar nicht geputzt!
+c	+	And what do they want?
+c	-	I haven’t cleaned jet.
 a1
-c	*	Na was schon: Dich ficken!
+c	*	Fuck you, what else.

@@ -1,5 +1,5 @@
 a0
-c	*	Ich wollte nur die Uniform anprobieren.
+c	*	I just wanted to try on the uniform.
 a1
-c	+	Na dann komm mal mit! ALARM!
-c	-	Gut, dass heute Kostümprobe ist!
+c	+	Ok, come with me. ALERT!
+c	-	Good thing, today is dress rehearsal!

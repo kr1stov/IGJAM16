@@ -1,13 +1,13 @@
 a0
-c	*	Ist hier jemand? Ich bin auf der Suche nach frischen Eiern!
+c	*	Hello is there anybody? I am on the hunt for fresh eggs!
 a1
-c	+	Wir hatten gerade Hühnerfest. Hier gibt es keine Hühner mehr. Alle tot.
-c	-	Klar. Wie viele?
+c	+	We just had a chicken feast. Here there are no more chicken. All dead.
+c	-	Sure. How many?
 a0
-c	-	Ich wollte sowieso vegan werden.
-c	+	Können Sie mir gar nicht weiterhelfen? Was mache ich denn jetzt?
+c	-	I actually wanted to become vegan anyway.
+c	+	So you can’t help me? What should I do now?
 a1
-c	+	Na gut. Zwei hab ich noch da.
-c 	-	Woanders nach Eiern suchen.
+c	+	Ok. I got two eggs left.
+c 	-	You can go on searching for eggs somewhere else.
 a0
-c	*	Können Sie mir die mal zeigen?
+c	*	Do you want to show them to me?
