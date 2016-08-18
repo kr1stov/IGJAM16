@@ -65,6 +65,8 @@ public class GameMaster : MonoBehaviour {
 
     public IEnumerator SayNextLine()
     {
+        Debug.Log("nextLineIndex: " + nextLineIndex + " | lines.count-1: " + (lines.Count - 1).ToString());
+
         if (nextLineIndex > lines.Count -1)
         {
             // animation
@@ -73,9 +75,8 @@ public class GameMaster : MonoBehaviour {
             StartCoroutine(winCondition.ShowWinScreen());
         }
         else
-        { 
-
-            foreach(Choice choice in lines[nextLineIndex].choices)
+        {
+            foreach (Choice choice in lines[nextLineIndex].choices)
             {
                 GameObject lineSaidObject = Instantiate(_textObject, contentArea.transform) as GameObject;
                 GameObject lineText = lineSaidObject.transform.Find("Text").gameObject;
@@ -99,9 +100,10 @@ public class GameMaster : MonoBehaviour {
 
                 lineSaid.text = choice.text;
                 lineSaid.GetComponent<TextTyper>().Init();
-                yield return StartCoroutine(lineSaid.GetComponent<TextTyper>().Speak(choice.indicator, talkDelay));
+                yield return StartCoroutine(lineSaid.gameObject.GetComponent<TextTyper>().Speak(choice.indicator, talkDelay));
             }
             nextLineIndex++;
+
         }
 
     }
