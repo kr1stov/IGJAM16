@@ -3,6 +3,7 @@ using System.Collections;
 using System.IO;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour {
 
@@ -28,26 +29,21 @@ public class GameMaster : MonoBehaviour {
     public Color partnerColor;
     private Canvas canvas;
 
+    private int nextSceneIndex = 0;
+
     void Awake()
     {
         canvas = FindObjectOfType<Canvas>();
+        nextSceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE");
     }
-
-    // Use this for initialization
-	IEnumerator Start () {
-        InitScene(ContentLoader.Instance.Scenes[0]);
-        yield return StartCoroutine(SayNextLine());
-        StartCoroutine(SayNextLine());
-
-
-    }
-
 
     public IEnumerator SayNextLine()
     {
         if(nextLineIndex > lines.Count -1)
         {
             // next scene
+            PlayerPrefs.SetInt("IGJAM16_SCENE", ++nextSceneIndex);
+            SceneManager.LoadScene("Transition");
         }
         else
         { 
@@ -74,7 +70,7 @@ public class GameMaster : MonoBehaviour {
 
     }
 
-    void InitScene(string filename)
+    public void InitScene(string filename)
     {
         string line = null;
         int currentActorId = 0;

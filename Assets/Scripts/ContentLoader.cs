@@ -2,10 +2,11 @@
 using System.Collections;
 using System.IO;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class ContentLoader : MonoBehaviour {
 
-
+    private GameMaster gm;
     private List<string> _scenes;
 
     public List<string> Scenes
@@ -16,36 +17,22 @@ public class ContentLoader : MonoBehaviour {
         }
     }
 
-    private static ContentLoader _instance = null;
-
-    public static ContentLoader Instance
-    {
-        get
-        {
-            if (_instance == null)
-                _instance = new ContentLoader();
-
-            return _instance;
-        }
-    }
-
     // Use this for initialization
 	IEnumerator Start () {
-	    if(_instance != null)
-        {
-            Destroy(this.gameObject);
-        }
+        gm = FindObjectOfType<GameMaster>();
 
-        _instance = this;
-        DontDestroyOnLoad(this);
+        StartCoroutine(LoadContent());
 
-        yield return StartCoroutine(LoadContent());
+        int sceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE");
+        gm.InitScene(_scenes[sceneIndex]);
 
-        // start game
-	}
+        yield return StartCoroutine(gm.SayNextLine());
+        StartCoroutine(gm.SayNextLine());
+    }
 
     IEnumerator LoadContent()
     {
+        _scenes = new List<string>();
         string line = null;
 
         using (TextReader reader = File.OpenText(Application.dataPath + "/StreamingAssets/config"))
@@ -60,10 +47,11 @@ public class ContentLoader : MonoBehaviour {
                 {
                     _scenes.Add(line);
                 }
+
+                yield return null;
+
             }
         }
-
-        yield return null;
     }
 
 

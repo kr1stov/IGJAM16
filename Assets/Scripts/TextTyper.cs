@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class TextTyper : MonoBehaviour {
 
@@ -32,11 +33,17 @@ public class TextTyper : MonoBehaviour {
 
     public void OnHover()
     {
+        if (_indicator == "*")
+            return;
+
         _textObject.fontStyle = (_textObject.fontStyle == FontStyle.Italic) ? FontStyle.BoldAndItalic : FontStyle.Bold;
     }
 
     public void OnExit()
     {
+        if (_indicator == "*")
+            return;
+
         _textObject.fontStyle = (_textObject.fontStyle == FontStyle.BoldAndItalic) ? FontStyle.Italic : FontStyle.Normal;
     }
 
@@ -44,11 +51,21 @@ public class TextTyper : MonoBehaviour {
     {
         if(_indicator == "+")
         {
+            _textObject.color = Color.green;
+
+            Canvas canvas = FindObjectOfType<Canvas>();
+            for(int i = 0; i< canvas.transform.childCount; i++)
+            {
+                canvas.transform.GetChild(i).GetComponent<EventTrigger>().enabled = false;
+            }
+
             GameMaster gm = FindObjectOfType<GameMaster>();
             StartCoroutine(gm.SayNextLine());
 
         }
         else
-        { }
+        {
+            _textObject.color = Color.green;
+        }
     }
 }
