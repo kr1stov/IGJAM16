@@ -1,7 +1,14 @@
 a0
-c	*	Hi , I'm from the porn business consulting . How do you find that?
+c	*	We are closing in a minute!
 a1	
-c	+	But we're a decent printery!
-c	-	Go away. In a couple of minutes it is closing time.
+c	+	Hi, I am the business consultant that you have ordered. For your new, sexy printery.
+c	-	Hello, I would like to get some flyers printed. For my brothel.
+c	-	Hey, do you have cheap ink cartridges in stock?
 a0
-c	*	You can make a lot of money with pron. And anyway: You do not look bad either.
+c	+	But we are a decent printery!
+c	-	Go away. In a couple of minutes it is closing time.
+c	-	You can start to take your clothes off. In a couple of minutes it es closing time.
+a1
+c	+	You can make a lot of money with pron. And anyway: You do not look bad either.
+c	-	Decent? You might give me a decent blow-job. 
+c	-	Boring!

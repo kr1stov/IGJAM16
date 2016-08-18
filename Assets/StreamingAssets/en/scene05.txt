@@ -3,14 +3,19 @@ c	*	I wanted to read something. You need to gain your knowledge somehow.
 a1
 c	-	Ok. We could read together. 
 c	+	You can not even do the ABC.
+c	-	What kind of book are you reading right now?
 a0
 c	+	I really wanted to read.
 c	-	You got me.
+c	-	Do I really need to prove that to you?
 a1
 c	+	But you can’t read.
-c	-	Wow, you have learned it very fast.
+c	-	You did not even manage to finish pre-school.
+c	-	Ok, you should go on reading your book.
 a0
 c	+	I really wanted to read.
-c	-	You got me.
+c	-	You got me. I am only pretending.
 a1
-c	*	I’ll teach you some things. By fucking you.
+c	+	I’ll teach you some things. By f***ing you.
+c	-	Who needs to know the ABC, if you f*** like that.
+c	-	Doctor Knows-it-all will penetrate you.
