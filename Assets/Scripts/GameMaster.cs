@@ -78,10 +78,11 @@ public class GameMaster : MonoBehaviour {
             foreach(Choice choice in lines[nextLineIndex].choices)
             {
                 GameObject lineSaidObject = Instantiate(_textObject, contentArea.transform) as GameObject;
-                _dialogueLinesSoFar.Add(lineSaidObject);
+                GameObject lineText = lineSaidObject.transform.Find("Text").gameObject;
+                _dialogueLinesSoFar.Add(lineText);
                 lineSaidObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
-                Text lineSaid = lineSaidObject.GetComponent<Text>();
+                Text lineSaid = lineText.GetComponent<Text>();
                 //lineSaid.alignment = ((lines[nextLineIndex].actorId % 2 == 0) ? TextAnchor.MiddleLeft : TextAnchor.MiddleRight);
                 if(lines[nextLineIndex].actorId % 2 == 1)
                 {
