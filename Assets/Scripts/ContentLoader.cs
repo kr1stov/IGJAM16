@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.IO;
+﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ContentLoader : MonoBehaviour {
@@ -23,7 +23,7 @@ public class ContentLoader : MonoBehaviour {
 
         StartCoroutine(LoadContent());
 
-        int sceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE");
+        int sceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE", 0);
         gm.InitScene(_scenes[sceneIndex]);
 
         yield return StartCoroutine(gm.SayNextLine());

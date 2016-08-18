@@ -27,20 +27,23 @@ public class GameMaster : MonoBehaviour {
     private int nextLineIndex = 0;
     public float talkDelay;
     public Color partnerColor;
-    private Canvas canvas;
+    public GameObject contentArea;
 
     private int nextSceneIndex = 0;
 
     void Awake()
     {
-        canvas = FindObjectOfType<Canvas>();
-        nextSceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE");
+        nextSceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE", 0);
     }
 
     public IEnumerator SayNextLine()
     {
         if(nextLineIndex > lines.Count -1)
         {
+
+
+            // animation
+
             // next scene
             PlayerPrefs.SetInt("IGJAM16_SCENE", ++nextSceneIndex);
             SceneManager.LoadScene("Transition");
@@ -50,7 +53,7 @@ public class GameMaster : MonoBehaviour {
 
             foreach(Choice choice in lines[nextLineIndex].choices)
             {
-                GameObject lineSaidObject = Instantiate(_textObject, canvas.transform) as GameObject;
+                GameObject lineSaidObject = Instantiate(_textObject, contentArea.transform) as GameObject;
                 lineSaidObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
                 Text lineSaid = lineSaidObject.GetComponent<Text>();

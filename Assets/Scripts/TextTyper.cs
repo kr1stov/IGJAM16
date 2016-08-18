@@ -10,7 +10,15 @@ public class TextTyper : MonoBehaviour {
     private string _currentText;
 
     private string _indicator;
+
+    private Animator _animator;
+    public float _animationSpeedDelta;
     
+    void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
     public void Init()
     {
         _textObject = GetComponent<Text>();
@@ -53,10 +61,10 @@ public class TextTyper : MonoBehaviour {
         {
             _textObject.color = Color.green;
 
-            Canvas canvas = FindObjectOfType<Canvas>();
-            for(int i = 0; i< canvas.transform.childCount; i++)
+            for(int i = 0; i< transform.parent.childCount; i++)
             {
-                canvas.transform.GetChild(i).GetComponent<EventTrigger>().enabled = false;
+                transform.parent.GetChild(i).GetComponent<EventTrigger>().enabled = false;
+                _animator.speed += _animationSpeedDelta;
             }
 
             GameMaster gm = FindObjectOfType<GameMaster>();
