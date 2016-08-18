@@ -14,8 +14,13 @@ public class Transition : MonoBehaviour {
 
     // Use this for initialization
 	IEnumerator Start () {
-        sceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE");
-        title.text += (" " + (sceneIndex + 1).ToString());
+        sceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE", 0);
+        string lang = PlayerPrefs.GetString("IGJAM16_LANG", "de");
+        
+        if(lang == "de")
+            title.text = "SZENE " + (sceneIndex + 1).ToString();
+        else
+            title.text = "SCENE " + (sceneIndex + 1).ToString();
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene("Main");
 	}

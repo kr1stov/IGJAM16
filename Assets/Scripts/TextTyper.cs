@@ -47,23 +47,37 @@ public class TextTyper : MonoBehaviour {
 
     public void OnHover()
     {
-        if (_indicator != "*")
+        if (_indicator == "*")
         {
+        }
+        else
+        { 
             if (_textObject.fontStyle == FontStyle.Italic)
+            { 
                 _textObject.fontStyle = FontStyle.BoldAndItalic;
+            }
             else
+            { 
                 _textObject.fontStyle = FontStyle.Bold;
+            }
         }
     }
 
     public void OnExit()
     {
-        if (_indicator != "*")
+        if (_indicator == "*")
+        {
+        }
+        else
         {
             if (_textObject.fontStyle == FontStyle.BoldAndItalic)
+            {
                 _textObject.fontStyle = FontStyle.Italic;
+            }
             else
+            {
                 _textObject.fontStyle = FontStyle.Normal;
+            }
         }
     }
 
