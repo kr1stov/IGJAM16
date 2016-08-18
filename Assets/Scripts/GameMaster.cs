@@ -31,19 +31,30 @@ public class GameMaster : MonoBehaviour {
     private string lang;
 
     private int nextSceneIndex = 0;
+    private ContentLoader contentLoader;
+
+    public List<GameObject> texts;
 
     void Awake()
     {
         nextSceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE", 0);
         lang = PlayerPrefs.GetString("IGJAM16_LANG", "de");
+        contentLoader = FindObjectOfType<ContentLoader>();
+        InitScene(contentLoader.Scenes[nextSceneIndex]);
+        texts = new List<GameObject>();
+
+    }
+
+    IEnumerator Start()
+    {
+        yield return StartCoroutine(SayNextLine());
+        StartCoroutine(SayNextLine());
     }
 
     public IEnumerator SayNextLine()
     {
         if(nextLineIndex > lines.Count -1)
         {
-
-
             // animation
 
             // next scene
@@ -56,6 +67,7 @@ public class GameMaster : MonoBehaviour {
             foreach(Choice choice in lines[nextLineIndex].choices)
             {
                 GameObject lineSaidObject = Instantiate(_textObject, contentArea.transform) as GameObject;
+                texts.Add(lineSaidObject);
                 lineSaidObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
                 Text lineSaid = lineSaidObject.GetComponent<Text>();

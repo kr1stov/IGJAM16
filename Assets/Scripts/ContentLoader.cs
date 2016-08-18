@@ -19,15 +19,13 @@ public class ContentLoader : MonoBehaviour {
 
     // Use this for initialization
 	IEnumerator Start () {
-        gm = FindObjectOfType<GameMaster>();
+        DontDestroyOnLoad(gameObject);
 
-        StartCoroutine(LoadContent());
+        Debug.Log("sceneIndex just before content load: " + Time.timeSinceLevelLoad);
+        yield return StartCoroutine(LoadContent());
+        Debug.Log("sceneIndex just after content load: "+ Time.timeSinceLevelLoad);
 
-        int sceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE", 0);
-        gm.InitScene(_scenes[sceneIndex]);
 
-        yield return StartCoroutine(gm.SayNextLine());
-        StartCoroutine(gm.SayNextLine());
     }
 
     IEnumerator LoadContent()
@@ -45,13 +43,18 @@ public class ContentLoader : MonoBehaviour {
                 { }
                 else
                 {
+                    Debug.Log("scene added:" + line);
                     _scenes.Add(line);
                 }
+
+                line = reader.ReadLine();
 
                 yield return null;
 
             }
         }
+
+        Debug.Log("scenes after load:" + _scenes.Count);
     }
 
 

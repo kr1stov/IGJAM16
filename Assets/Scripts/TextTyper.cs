@@ -13,10 +13,13 @@ public class TextTyper : MonoBehaviour {
 
     private Animator _animator;
     public float _animationSpeedDelta;
+
+    private GameObject contentArea;
     
     void Awake()
     {
         _animator = GetComponent<Animator>();
+        contentArea = GameObject.Find("Content");
     }
 
     public void Init()
@@ -41,18 +44,24 @@ public class TextTyper : MonoBehaviour {
 
     public void OnHover()
     {
-        if (_indicator == "*")
-            return;
-
-        _textObject.fontStyle = (_textObject.fontStyle == FontStyle.Italic) ? FontStyle.BoldAndItalic : FontStyle.Bold;
+        if (_indicator != "*")
+        {
+            if (_textObject.fontStyle == FontStyle.Italic)
+                _textObject.fontStyle = FontStyle.BoldAndItalic;
+            else
+                _textObject.fontStyle = FontStyle.Bold;
+        }
     }
 
     public void OnExit()
     {
-        if (_indicator == "*")
-            return;
-
-        _textObject.fontStyle = (_textObject.fontStyle == FontStyle.BoldAndItalic) ? FontStyle.Italic : FontStyle.Normal;
+        if (_indicator != "*")
+        {
+            if (_textObject.fontStyle == FontStyle.BoldAndItalic)
+                _textObject.fontStyle = FontStyle.Italic;
+            else
+                _textObject.fontStyle = FontStyle.Normal;
+        }
     }
 
     public void OnClick()
@@ -61,19 +70,19 @@ public class TextTyper : MonoBehaviour {
         {
             _textObject.color = Color.green;
 
-            for(int i = 0; i< transform.parent.childCount; i++)
+            GameMaster gm = FindObjectOfType<GameMaster>();
+
+            foreach (GameObject text in gm.texts)
             {
-                transform.parent.GetChild(i).GetComponent<EventTrigger>().enabled = false;
-                _animator.speed += _animationSpeedDelta;
+                text.GetComponent<EventTrigger>().enabled = false;
             }
 
-            GameMaster gm = FindObjectOfType<GameMaster>();
             StartCoroutine(gm.SayNextLine());
 
         }
-        else
+        else if(_indicator == "-")
         {
-            _textObject.color = Color.green;
+            _textObject.color = Color.red;
         }
     }
 }
