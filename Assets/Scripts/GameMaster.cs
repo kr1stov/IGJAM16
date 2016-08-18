@@ -79,15 +79,22 @@ public class GameMaster : MonoBehaviour {
             {
                 GameObject lineSaidObject = Instantiate(_textObject, contentArea.transform) as GameObject;
                 GameObject lineText = lineSaidObject.transform.Find("Text").gameObject;
+                GameObject lineName = lineSaidObject.transform.Find("Name").gameObject;
                 _dialogueLinesSoFar.Add(lineText);
                 lineSaidObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
                 Text lineSaid = lineText.GetComponent<Text>();
+                Text lineTalker = lineName.GetComponent<Text>();
                 //lineSaid.alignment = ((lines[nextLineIndex].actorId % 2 == 0) ? TextAnchor.MiddleLeft : TextAnchor.MiddleRight);
                 if(lines[nextLineIndex].actorId % 2 == 1)
                 {
                     lineSaid.fontStyle = FontStyle.Italic;
                     lineSaid.color = partnerColor;
+                    lineTalker.text = "Aba";
+                }
+                else
+                {
+                    lineTalker.text = "Bab";
                 }
 
                 lineSaid.text = choice.text;
