@@ -3,3 +3,5 @@ c	*	Man, hast du einen strengen Geruch! Jetzt ist aber Schluss mit der Furzerei!
 a1
 c	+	Schleck ihn mir ab. Schleck den Käse von der Stulle!
 c	-	Aber ich kann sonst nicht kommen!
+c	-	Ich war das nicht. Du warst das!
+c	-	Der Hund hat was Falsches gegessen.

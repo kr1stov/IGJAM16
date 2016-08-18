@@ -3,8 +3,12 @@ c	*	Das ist ein aufregendes Auto!
 a1
 c	-	Soll ich dich auf eine Spritztour mitnehmen?
 c	+	Ich hab auch einen aufregenden Job und bin ein aufregender Typ.
+c	-	Ich habe gar kein Auto.
 a0
 c	+	Das gefällt mir! Willst du mal in meinen Apfel beißen?
 c	-	Du Proll.
+c	-	Das klingt ja aufregend!
 a1
-c	*	Der ist aber lecker. Ist der Apfel so gut oder liegt es an dir?
+c	+	Der ist aber lecker. Ist der Apfel so gut oder liegt es an dir?
+c	-	Bei Adam und Eva hat der Spruch schon funktioniert. Bei mir auch.
+c	-	Von Äpfeln bekomme ich Blähungen.

@@ -3,14 +3,19 @@ c	*	Ich wollte gerade was lesen. Irgendwoher muss man seine Bildung doch bekomme
 a1
 c	-	Ok. Wir können ja zusammen lesen.
 c	+	Du kannst doch noch nicht mal das ABC.
+c	-	Was liest du denn gerade?
 a0
 c	+	Ich wollte wirklich lesen.
 c	-	Du hast mich ertappt.
+c	-	Muss ich es dir beweisen?
 a1
 c	+	Aber du kannst nicht lesen.
-c	-	Wow, das hast du ja schnell gelernt.
+c	-	Du bist doch sogar durch die Vorschule gerasselt!
+c	-	Ok, dann lass ich dich jetzt lesen.
 a0
-c	+	Ich wollte wirklich lesen.
-c	-	Du hast mich erwischt!
+c	+	Ich kann lesen.
+c	-	Du hast mich erwischt! Ich tu nur so als ob.
 a1
-c	*	Die Bildung kriegst du von mir. Indem du ordentlich gefickt wirst.
+c	+	Die Bildung kriegst du von mir. Indem du ordentlich gef***t wirst.
+c	-	Aber wer braucht schon das ABC, wenn man gut f****n kann?
+c	-	Doktor Allwissend fährt gleich in dich hinein!

@@ -2,14 +2,18 @@ a0
 c	*	Was machen wir nur mit dem angebrochenen Nachmittag?
 a1
 c	+	Es regnet unheimlich draußen, mit Wegfahren wird wohl nichts. Aber mir kommt da eine Idee...
-c	-	Keine Ahnung. Lass mal chillen.
+c	-	Lass mal chillen. Mit Netflix. Und Pizza.
+c	-	Ich kenne da paar dunkle Ecken für ungeheure Taten…
 a0
 c	+	Da bin ich aber gespannt!
 c	-	Du hast immer doofe Ideen...
+c	-	Eigentlich ist mir mehr nach Pizza.
 a1
 c	*	Meine Freunde waren total begeistert von dir. Die können heute ja vorbei kommen.
 a0
 c	+	Und? Was wollen die dann hier?
 c	-	Ich hab ja gar nicht geputzt!
+c	-	Na toll, ein Männerabend. Ich will doch auch meinen Spaß.
 a1
-c	*	Na was schon: Dich ficken!
+c	+	Na was schon: Dich f****n!
+c	-	Von dir verwöhnt werden. So wie ich!

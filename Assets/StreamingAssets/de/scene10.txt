@@ -3,14 +3,18 @@ c	*	Mein Wagen ist kaputt. Ich weiß gar nicht, was der hat!
 a1
 c	+	Sorry, ich muss dir leider sagen, dass dein Auto totaler Schrott ist.
 c	-	Der qualmt nicht. Also ist der noch heile.
+c	-	Mit Autos kenn ich mich nicht gut aus. Aber dafür mit Autofahrerinnen.
 a0
 c	-	Dann kann ich ja endlich bei "Suche Traumauto - biete Rostlaube" mitmachen.
-c	+	Ich muss doch irgendwie nach Hause kommen. Ich hab gar kein Geld dabei.
+c	+	Ich muss doch irgendwie nach Hause kommen. Ich hab doch noch nicht mal Geld dabei.
+c	-	Kannst du mich nicht mitnehmen?
 a1
 c	+	Mit dem Auto kannst du nicht mehr fahren. Aber ich weiß da was besseres. Komm mit.
 c	-	Ich leih dir Geld.
+c	-	Du siehst doch gut aus. Da kannst du auch trampen. Irgendwer bringt dich schon nach Hause.
 a0
 c	+	Wohin bringst du mich denn?
 c	-	Ich hasse laufen.
 a1
-c	*	Passiert schon nichts.
+c	+	Wir werden ganz viel Spaß haben.
+c	-	Wir machen eine Schnitzeljagd!

@@ -1,5 +1,8 @@
 a0
 c	*	Ich wollte nur die Uniform anprobieren.
 a1
-c	+	Na dann komm mal mit! ALARM!
 c	-	Gut, dass heute Kostümprobe ist!
+c	-	Karneval ist noch nicht!
+c	–	Fasching ist auch noch nicht!
+c	+	Na dann komm mal mit! ALARM!
+c	-	Gut, dass ich ein paar Betten-Träger für diesen Augenblick engagiert habe.

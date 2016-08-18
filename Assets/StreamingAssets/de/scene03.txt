@@ -1,7 +1,14 @@
 a0
-c	*	Hi, ich bin von der Porno-Unternehmensberatung. Wie findest du das?
+c	*	Wir schließen gleich!
 a1	
-c	+	Aber wir sind doch eine anständige Druckerei!
-c	-	Geh weg, ich hab gleich Feierabend!
+c	+	Hi, ich bin der bestellte Unternehmensbeter. Für ihre neue, sexy Druckerei.
+c	-	Hallo, ich möchte ein paar Werbe-Flyer drucken. Für mein Bordell.
+c	–	Guten Tag, haben Sie auch günstige Druckerpatronen? 
 a0
-c	*	Mit Pornos macht man heute Geld. Und überhaupt. Du siehst auch nicht schlecht aus.
+c	+	Aber wir sind doch ein anständiger Betrieb!
+c	-	Geh weg, ich hab gleich Feierabend!
+c	-	Zieh dich aus, ich hab gleich Feierabend!
+a0
+c	+	Mit Pornos macht man heute viel Geld. Und überhaupt. Du siehst auch nicht schlecht aus.
+c	-	Anständig? Dann kannst du es mir auch anständig besorgen!
+c	-	Langweilig!

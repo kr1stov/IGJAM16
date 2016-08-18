@@ -3,27 +3,37 @@ c	*	Ich hätte gerne ein Schnitzel mit Zwiebeln.
 a1
 c	+	Ein Zwiebel-Schnitzel?
 c	-	Das ist aus.
+c	-	Gute Schnitzel gibt es nur in Österreich.
 a0
 c	+	Nein. Ein Schnitzel mit Zwiebeln. Da können auch ein paar Champignons drauf sein.
-c	-	Genau
+c	-	Genau.
+c	-	Ich verzichte auf das Schnitzel. Ich hätte gerne eine Zwiebel mit Champignons.
 a1
 c	+	Ein Jägerschnitzel?
 c	-	Das haben wir nicht.
+c	-	Ein Jägerschnitzel? Wollen sie dem Jäger das Essen wegessen?
 a0
 c	-	Genau.
 c	+	Nein. Ein Wiener Schnitzel mit Zwiebeln und Champignons.
+c	-	Nein. Was können Sie mir denn empfehlen?
 a1
 c	+	Ok. Ein Wiener Schnitzel mit Zwiebeln und Champignons.
 c	-	Das haben wir nicht.
 a0
-c	*	Und einen kalten Engel.
+c	+	Und einen kalten Engel hätte ich auch gerne.
+c	-	Und dazu ein schönes Bier.
+c	-	Und dazu einen Sex on The Beach?
 a1
 c	+	Ich dreh die Heizung runter. Und dann bekommen Sie Ihren kalten Engel.
 c	-	Den gibt es erst ab 18 Uhr.
 a0
-c	*	Ich will meinen kalten Engel.	
+c	+	Ich will meinen kalten Engel.	
+c	-	Ich nehme auch einen warmen Engel.
+c	-	Hauptsache Engel.
 a1
-c	+	Ich kann Ihnen auch eine heiße Muschi servieren.
+c	+	Ich kann Ihnen gerne auch eine heiße M****i servieren.
+c	-	Die Küche hat leider schon geschlossen.
 c	-	Kalter Engel, kommt sofort!
 a0
-c	*	Dann können wir auch mit der heißen Muschi anfangen!
+c	+	Dann können wir auch mit der heißen M****i anfangen!
+c	-	Nie krieg ich das, was ich eigentlich will.
