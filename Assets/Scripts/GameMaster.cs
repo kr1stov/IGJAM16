@@ -79,7 +79,7 @@ public class GameMaster : MonoBehaviour {
         int currentActorId = 0;
         string[] elements;
 
-        using (TextReader reader = File.OpenText(Application.dataPath + "/StreamingAssets/" + filename))
+        using (TextReader reader = File.OpenText(Application.dataPath + "/StreamingAssets/" + filename + ".txt"))
         {
             line = reader.ReadLine();
 

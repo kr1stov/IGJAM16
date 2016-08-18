@@ -35,7 +35,7 @@ public class ContentLoader : MonoBehaviour {
         _scenes = new List<string>();
         string line = null;
 
-        using (TextReader reader = File.OpenText(Application.dataPath + "/StreamingAssets/config"))
+        using (TextReader reader = File.OpenText(Application.dataPath + "/StreamingAssets/config.txt"))
         {
             line = reader.ReadLine();
 
