@@ -3,13 +3,18 @@ c	*	What shall we do with this late afternoon?
 a1
 c	+	It’s pouring rain outside, so we should not leave. But I already have an other great idea…
 c	-	I don’t know. Let’s chill.
+c	-	I know some dark corners for indescribable things.
 a0
 c	+	I am so exited.
 c	-	You always got bad ideas.
+c	-	Actually, I just want to eat pizza.
 a1
-c	*	My friends raved about you. They would like to come by today.
+c	+	My friends raved about you. They would like to come by today.
+c	-	We could go on a date night.
 a0
 c	+	And what do they want?
 c	-	I haven’t cleaned jet.
+c	-	Yey, a man’s night out. I want to have fun as well!
 a1
-c	*	Fuck you, what else.
+c	+	F*** you, what else.
+c	-	They want to be treated by you. Just like I do!

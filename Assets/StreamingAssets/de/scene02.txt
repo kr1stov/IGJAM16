@@ -9,7 +9,8 @@ c	+	Da bin ich aber gespannt!
 c	-	Du hast immer doofe Ideen...
 c	-	Eigentlich ist mir mehr nach Pizza.
 a1
-c	*	Meine Freunde waren total begeistert von dir. Die können heute ja vorbei kommen.
+c	+	Meine Freunde waren total begeistert von dir. Die können heute ja vorbei kommen.
+c	-	Wir können ja schick Essen gehen.
 a0
 c	+	Und? Was wollen die dann hier?
 c	-	Ich hab ja gar nicht geputzt!

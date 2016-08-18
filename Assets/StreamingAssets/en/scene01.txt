@@ -3,6 +3,7 @@ c	*	Why is hay laying on the ground?
 a1	
 c	+	Why are you wearing a mask anyway?
 c	-	Because reasons.
+c	-	I like hay. I like the smell of it.  
 a0	
 c	-	Why is your voice so deep?
 c	+	Just go on and give me a blow-job.
