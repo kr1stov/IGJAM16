@@ -25,13 +25,17 @@ public class WinningCondition : MonoBehaviour {
         SceneManager.LoadScene("Main");
     }
 
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene("Transition");
+    }
+
     public IEnumerator ShowWinScreen()
     {
         gm.NextSceneIndex += 1;
         PlayerPrefs.SetInt("IGJAM16_SCENE", gm.NextSceneIndex);
 
         GetComponent<Animator>().SetTrigger("win");
-        SceneManager.LoadScene("Transition");
 
         yield return null;
     }
