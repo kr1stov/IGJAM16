@@ -4,6 +4,7 @@ using System.IO;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameMaster : MonoBehaviour {
 
@@ -28,6 +29,8 @@ public class GameMaster : MonoBehaviour {
     public GameObject contentArea;
     private string lang;
 
+
+
     private int nextSceneIndex = 0;
     public int NextSceneIndex {
         get { return nextSceneIndex; }
@@ -45,6 +48,8 @@ public class GameMaster : MonoBehaviour {
     public Canvas secondCanvas;
     private WinningCondition winCondition;
 
+
+
     void Awake()
     {
         nextSceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE", 0);
@@ -54,6 +59,8 @@ public class GameMaster : MonoBehaviour {
         _dialogueLinesSoFar = new List<GameObject>();
 
         winCondition = FindObjectOfType<WinningCondition>();
+
+
 
     }
 
@@ -91,15 +98,18 @@ public class GameMaster : MonoBehaviour {
                 {
                     lineSaid.fontStyle = FontStyle.Italic;
                     lineSaid.color = partnerColor;
-                    lineTalker.text = "Aba";
+                    lineTalker.text = "Bab";
                 }
                 else
                 {
-                    lineTalker.text = "Bab";
+                    lineTalker.text = "Aba";
                 }
 
                 lineSaid.text = choice.text;
                 lineSaid.GetComponent<TextTyper>().Init();
+
+                //lineName.GetComponent<EventTrigger>().enabled = false;
+
                 yield return StartCoroutine(lineSaid.gameObject.GetComponent<TextTyper>().Speak(choice.indicator, talkDelay));
             }
             nextLineIndex++;

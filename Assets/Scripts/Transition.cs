@@ -10,10 +10,9 @@ public class Transition : MonoBehaviour {
     public float delay;
 
     private int sceneIndex;
-    
 
     // Use this for initialization
-	IEnumerator Start () {
+    IEnumerator Start () {
         sceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE", 0);
         string lang = PlayerPrefs.GetString("IGJAM16_LANG", "de");
         
