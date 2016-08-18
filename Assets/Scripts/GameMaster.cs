@@ -28,12 +28,14 @@ public class GameMaster : MonoBehaviour {
     public float talkDelay;
     public Color partnerColor;
     public GameObject contentArea;
+    private string lang;
 
     private int nextSceneIndex = 0;
 
     void Awake()
     {
         nextSceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE", 0);
+        lang = PlayerPrefs.GetString("IGJAM16_LANG", "de");
     }
 
     public IEnumerator SayNextLine()
@@ -79,7 +81,7 @@ public class GameMaster : MonoBehaviour {
         int currentActorId = 0;
         string[] elements;
 
-        using (TextReader reader = File.OpenText(Application.dataPath + "/StreamingAssets/" + filename + ".txt"))
+        using (TextReader reader = File.OpenText(Application.dataPath + "/StreamingAssets/" + lang + "/" +filename + ".txt"))
         {
             line = reader.ReadLine();
 

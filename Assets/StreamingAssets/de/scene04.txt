@@ -1,0 +1,10 @@
+a0
+c	*	Das ist ein aufregendes Auto!
+a1
+c	-	Soll ich dich auf eine Spritztour mitnehmen?
+c	+	Ich hab auch einen aufregenden Job und bin ein aufregender Typ.
+a0
+c	+	Das gefällt mir! Willst du mal in meinen Apfel beißen?
+c	-	Du Proll.
+a1
+c	*	Der ist aber lecker. Ist der Apfel so gut oder liegt es an dir?

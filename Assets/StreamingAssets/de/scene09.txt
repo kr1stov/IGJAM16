@@ -1,0 +1,13 @@
+a0
+c	*	Ist hier jemand? Ich bin auf der Suche nach frischen Eiern!
+a1
+c	+	Wir hatten gerade Hühnerfest. Hier gibt es keine Hühner mehr. Alle tot.
+c	-	Klar. Wie viele?
+a0
+c	-	Ich wollte sowieso vegan werden.
+c	+	Können Sie mir gar nicht weiterhelfen? Was mache ich denn jetzt?
+a1
+c	+	Na gut. Zwei hab ich noch da.
+c 	-	Woanders nach Eiern suchen.
+a0
+c	*	Können Sie mir die mal zeigen?

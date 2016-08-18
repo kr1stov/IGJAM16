@@ -1,0 +1,15 @@
+a0
+c	*	Was machen wir nur mit dem angebrochenen Nachmittag?
+a1
+c	+	Es regnet unheimlich draußen, mit Wegfahren wird wohl nichts. Aber mir kommt da eine Idee...
+c	-	Keine Ahnung. Lass mal chillen.
+a0
+c	+	Da bin ich aber gespannt!
+c	-	Du hast immer doofe Ideen...
+a1
+c	*	Meine Freunde waren total begeistert von dir. Die können heute ja vorbei kommen.
+a0
+c	+	Und? Was wollen die dann hier?
+c	-	Ich hab ja gar nicht geputzt!
+a1
+c	*	Na was schon: Dich ficken!

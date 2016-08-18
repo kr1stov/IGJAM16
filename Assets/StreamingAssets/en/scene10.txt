@@ -1,0 +1,16 @@
+a0
+c	*	Mein Wagen ist kaputt. Ich weiß gar nicht, was der hat!
+a1
+c	+	Sorry, ich muss dir leider sagen, dass dein Auto totaler Schrott ist.
+c	-	Der qualmt nicht. Also ist der noch heile.
+a0
+c	-	Dann kann ich ja endlich bei "Suche Traumauto - biete Rostlaube" mitmachen.
+c	+	Ich muss doch irgendwie nach Hause kommen. Ich hab gar kein Geld dabei.
+a1
+c	+	Mit dem Auto kannst du nicht mehr fahren. Aber ich weiß da was besseres. Komm mit.
+c	-	Ich leih dir Geld.
+a0
+c	+	Wohin bringst du mich denn?
+c	-	Ich hasse laufen.
+a1
+c	*	Passiert schon nichts.

@@ -9,6 +9,8 @@ public class GameStart : MonoBehaviour {
 	    if(Input.anyKeyDown)
         {
             PlayerPrefs.SetInt("IGJAM16_SCENE", 0);
+            PlayerPrefs.SetString("IGJAM16_LANG", "de");
+
             SceneManager.LoadScene("Transition");
         }
     }
