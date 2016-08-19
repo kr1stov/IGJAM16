@@ -97,15 +97,14 @@ public class GameMaster : MonoBehaviour {
     {
         Debug.Log("nextLineIndex: " + nextLineIndex + " | lines.count-1: " + (lines.Count - 1).ToString());
 
-        if (nextLineIndex > lines.Count -1)
+        if (nextLineIndex >= lines.Count)
         {
             // animation
 
             // next scene
             //StartCoroutine(winCondition.ShowWinScreen());
 
-            AnimationCurve();
-            winCondition.LoadNextScene();
+            StartCoroutine(winCondition.LoadNextScene(InfoAreaAnimator, infoAreaSpeedIncrease));
         }
         else
         {
