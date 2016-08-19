@@ -25,7 +25,7 @@ public class WinningCondition : MonoBehaviour {
         SceneManager.LoadScene("Main");
     }
 
-    public IEnumerator LoadNextScene(Animator anim, float speedIncreas)
+    public IEnumerator LoadNextScene(Animator anim, float speedIncrease)
     {
         yield return IncreaseAnimationSpeed(anim, speedIncrease);
 
