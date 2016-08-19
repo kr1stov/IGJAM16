@@ -103,7 +103,8 @@ public class GameMaster : MonoBehaviour {
 
             // next scene
             //StartCoroutine(winCondition.ShowWinScreen());
-
+            nextSceneIndex++;
+            PlayerPrefs.SetInt("IGJAM16_SCENE", nextSceneIndex);
             StartCoroutine(winCondition.LoadNextScene(InfoAreaAnimator, infoAreaSpeedIncrease));
         }
         else

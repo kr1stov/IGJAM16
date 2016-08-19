@@ -11,6 +11,13 @@ public class QuitButton : MonoBehaviour
     void Awake()
     {
         text = GetComponent<Text>();
+
+        string lang = PlayerPrefs.GetString("IGJAM16_LANG", "de");
+        if (lang == "de")
+            text.text = "beenden";
+        else if(lang == "en")
+            text.text = "quit";
+
     }
 
 
