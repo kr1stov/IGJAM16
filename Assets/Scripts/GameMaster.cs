@@ -55,6 +55,9 @@ public class GameMaster : MonoBehaviour {
         get { return infoAreaAnimator; }
     }
 
+    private TitleArea titleArea;
+    private Text titleAreaText;
+
     public float infoAreaSpeedIncrease;
 
     public AnimationCurve curve;
@@ -72,7 +75,6 @@ public class GameMaster : MonoBehaviour {
 
         infoArea = FindObjectOfType<InfoArea>();
         infoAreaAnimator = infoArea.GetComponent<Animator>();
-
     }
 
     IEnumerator Start()
@@ -164,6 +166,9 @@ public class GameMaster : MonoBehaviour {
 
     public void InitScene(string filename)
     {
+       titleArea = FindObjectOfType<TitleArea>();
+       titleAreaText = titleArea.GetComponent<Text>();
+
         string line = null;
         int currentActorId = 0;
         string[] elements;
@@ -202,6 +207,12 @@ public class GameMaster : MonoBehaviour {
                     }
 
                     lines.Add(newLine);
+                }
+                else if (line.StartsWith("t"))
+                {
+                    elements = line.Split('\t');
+                    string title = elements[1];
+                    titleAreaText.text = title;
                 }
 
             }

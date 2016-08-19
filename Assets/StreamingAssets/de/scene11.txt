@@ -1,7 +1,0 @@
-a0
-c	*	Das kam dir alles so bekannt vor?
-a1
-c	+	Ja
-c	-	Nö, wieso?
-a0
-c	+	Dann guckst du echt viele Pornos.

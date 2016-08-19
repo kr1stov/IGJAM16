@@ -1,7 +1,0 @@
-a0
-c	*	You recognized some things?
-a1
-c	+	Yes
-c	-	No, why?
-a0
-c	+	Maybe you watch a lot of porn 

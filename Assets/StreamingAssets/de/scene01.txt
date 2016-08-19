@@ -1,5 +1,5 @@
 a0	
-c	*	Warum liegt hier eigentlich Stroh rum?
+c	*	Warum liegt hier überhaupt Stroh rum?
 a1	
 c	+	Warum hast du eine Maske auf?
 c	-	Weil is so.
