@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 public class WinningCondition : MonoBehaviour {
 
     GameMaster gm;
+    ParticleSystem ps;
 
     void Start()
     {
         gm = FindObjectOfType<GameMaster>();
+        ps = FindObjectOfType<ParticleSystem>();
     }
 
     public IEnumerator ShowFailScreen()
@@ -39,6 +41,10 @@ public class WinningCondition : MonoBehaviour {
             yield return new WaitForSeconds(0.2f);
             anim.speed += speedIncrease;
         }
+
+        ps.Play();
+        yield return new WaitForSeconds(2);
+
     }
 
     public IEnumerator ShowWinScreen()

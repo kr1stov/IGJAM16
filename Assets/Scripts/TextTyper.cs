@@ -93,7 +93,7 @@ public class TextTyper : MonoBehaviour {
 
         if (_indicator == "+")
         {
-            _textObject.color = Color.green;
+            _textObject.fontStyle = FontStyle.BoldAndItalic;
 
 
             foreach (GameObject line in gm.DialogueLinesSoFar)
@@ -113,7 +113,7 @@ public class TextTyper : MonoBehaviour {
         }
         else if(_indicator == "-")
         {
-            _textObject.color = Color.red;
+            _textObject.fontStyle = FontStyle.Italic;
 
             StartCoroutine(winCondition.ShowFailScreen());
 

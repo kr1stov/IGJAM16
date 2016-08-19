@@ -25,7 +25,6 @@ public class GameMaster : MonoBehaviour {
     public List<DialogLine> lines = new List<DialogLine>();
     private int nextLineIndex = 0;
     public float talkDelay;
-    public Color partnerColor;
     public GameObject contentArea;
     private string lang;
 
@@ -119,20 +118,15 @@ public class GameMaster : MonoBehaviour {
                 GameObject lineName = lineSaidObject.transform.Find("Name").gameObject;
                 _dialogueLinesSoFar.Add(lineText);
                 lineSaidObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
-
                 lineSaidObject.GetComponentInChildren<EventTrigger>().enabled = false;
-
-
                 Text lineSaid = lineText.GetComponent<Text>();
                 Text lineTalker = lineName.GetComponent<Text>();
-                //lineSaid.alignment = ((lines[nextLineIndex].actorId % 2 == 0) ? TextAnchor.MiddleLeft : TextAnchor.MiddleRight);
-                if(lines[nextLineIndex].actorId % 2 == 1)
+
+                if (lines[nextLineIndex].actorId % 2 == 1)
                 {
-                    lineSaid.fontStyle = FontStyle.Italic;
-                    lineSaid.color = partnerColor;
                     if(!name1DisplayedOnce)
                     { 
-                        lineTalker.text = "Bab";
+                        lineTalker.text = "Bab:";
                         name1DisplayedOnce = true;
                     }
                     else
@@ -145,7 +139,7 @@ public class GameMaster : MonoBehaviour {
                 {
                     if (!name2DisplayedOnce)
                     {
-                        lineTalker.text = "Aba";
+                        lineTalker.text = "Aba:";
                         name2DisplayedOnce = true;
                     }
                     else
