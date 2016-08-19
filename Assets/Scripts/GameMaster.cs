@@ -116,6 +116,7 @@ public class GameMaster : MonoBehaviour {
                 GameObject lineSaidObject = Instantiate(_textObject, contentArea.transform) as GameObject;
                 GameObject lineText = lineSaidObject.transform.Find("Text").gameObject;
                 GameObject lineName = lineSaidObject.transform.Find("Name").gameObject;
+                lineText.GetComponent<EventTrigger>().enabled = false;
                 _dialogueLinesSoFar.Add(lineText);
                 lineSaidObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
                 lineSaidObject.GetComponentInChildren<EventTrigger>().enabled = false;

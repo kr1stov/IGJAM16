@@ -42,6 +42,7 @@ public class WinningCondition : MonoBehaviour {
             anim.speed += speedIncrease;
         }
 
+        anim.speed = 0;
         ps.Play();
         yield return new WaitForSeconds(2);
 
