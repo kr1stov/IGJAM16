@@ -18,13 +18,14 @@ public class TextTyper : MonoBehaviour {
 
     private WinningCondition winCondition;
 
-
+    private Scrollbar scrollbar;
 
     void Awake()
     {
         _animator = GetComponent<Animator>();
         contentArea = GameObject.Find("Content");
         winCondition = FindObjectOfType<WinningCondition>();
+        scrollbar = FindObjectOfType<Scrollbar>();
     }
 
     public void Init()
@@ -41,9 +42,14 @@ public class TextTyper : MonoBehaviour {
 
         for (int i = 0; i < _text.Length; i++)
         {
+            scrollbar = FindObjectOfType<Scrollbar>();
+
             _currentText += _text[i];
             _textObject.text = _currentText;
             yield return new WaitForSeconds(delay);
+
+            if(scrollbar)
+                scrollbar.value = 0;
         }
 
         GetComponent<EventTrigger>().enabled = true;
@@ -91,7 +97,7 @@ public class TextTyper : MonoBehaviour {
         GameMaster gm = FindObjectOfType<GameMaster>();
 
 
-        if (_indicator == "+")
+        if (_indicator == "+" && gm.FinishedSpeaking)
         {
             _textObject.fontStyle = FontStyle.BoldAndItalic;
 
@@ -111,7 +117,7 @@ public class TextTyper : MonoBehaviour {
             StartCoroutine(gm.SayNextLine());
 
         }
-        else if(_indicator == "-")
+        else if(_indicator == "-" && gm.FinishedSpeaking)
         {
             _textObject.fontStyle = FontStyle.Italic;
 

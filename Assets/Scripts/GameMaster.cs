@@ -21,6 +21,7 @@ public class GameMaster : MonoBehaviour {
     }
 
     public GameObject _textObject;
+    public GameObject _emptyTextObject;
 
     public List<DialogLine> lines = new List<DialogLine>();
     private int nextLineIndex = 0;
@@ -62,9 +63,16 @@ public class GameMaster : MonoBehaviour {
 
     public AnimationCurve curve;
 
+    private bool finishedSpeaking;
+    public bool FinishedSpeaking
+    {
+        get { return finishedSpeaking; }
+    }
 
     void Awake()
     {
+        finishedSpeaking = false;
+
         nextSceneIndex = PlayerPrefs.GetInt("IGJAM16_SCENE", 0);
         lang = PlayerPrefs.GetString("IGJAM16_LANG", "de");
         contentLoader = FindObjectOfType<ContentLoader>();
@@ -96,6 +104,7 @@ public class GameMaster : MonoBehaviour {
 
     public IEnumerator SayNextLine()
     {
+        finishedSpeaking = false;
         Debug.Log("nextLineIndex: " + nextLineIndex + " | lines.count-1: " + (lines.Count - 1).ToString());
 
         if (nextLineIndex >= lines.Count)
@@ -113,12 +122,14 @@ public class GameMaster : MonoBehaviour {
             bool name1DisplayedOnce = false;
             bool name2DisplayedOnce = false;
 
+            Instantiate(_emptyTextObject, contentArea.transform);
+
             foreach (Choice choice in lines[nextLineIndex].choices)
             {
                 GameObject lineSaidObject = Instantiate(_textObject, contentArea.transform) as GameObject;
                 GameObject lineText = lineSaidObject.transform.Find("Text").gameObject;
                 GameObject lineName = lineSaidObject.transform.Find("Name").gameObject;
-                lineText.GetComponent<EventTrigger>().enabled = false;
+                //lineText.GetComponent<EventTrigger>().enabled = false;
                 _dialogueLinesSoFar.Add(lineText);
                 lineSaidObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
                 lineSaidObject.GetComponentInChildren<EventTrigger>().enabled = false;
@@ -158,6 +169,7 @@ public class GameMaster : MonoBehaviour {
 
                 yield return StartCoroutine(lineSaid.gameObject.GetComponent<TextTyper>().Speak(choice.indicator, talkDelay));
             }
+            finishedSpeaking = true;
             nextLineIndex++;
 
         }

@@ -2,15 +2,18 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class WinningCondition : MonoBehaviour {
+public class WinningCondition : MonoBehaviour
+{
 
     GameMaster gm;
     ParticleSystem ps;
+    ContentLoader cl;
 
     void Start()
     {
         gm = FindObjectOfType<GameMaster>();
         ps = FindObjectOfType<ParticleSystem>();
+        cl = FindObjectOfType<ContentLoader>();
     }
 
     public IEnumerator ShowFailScreen()
@@ -31,12 +34,17 @@ public class WinningCondition : MonoBehaviour {
     {
         yield return IncreaseAnimationSpeed(anim, speedIncrease);
 
-        SceneManager.LoadScene("Transition");
+        Debug.Log("<color=green>nextSceneIndex: " + gm.NextSceneIndex + " | scenes: " + cl.Scenes.Count + "</color>");
+
+        if (gm.NextSceneIndex < cl.Scenes.Count - 1)
+            SceneManager.LoadScene("Transition");
+        else
+            SceneManager.LoadScene("End");
     }
 
     IEnumerator IncreaseAnimationSpeed(Animator anim, float speedIncrease)
     {
-        for(int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
         {
             yield return new WaitForSeconds(0.2f);
             anim.speed += speedIncrease;
