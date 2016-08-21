@@ -12,9 +12,9 @@ public class EndText : MonoBehaviour {
 
         string lang = PlayerPrefs.GetString("IGJAM16_LANG", "de");
         if (lang == "de")
-            text.text = "GRATULATION";
+            text.text = "GRATULATION. DU BIST EIN WAHRER POET";
         else if (lang == "en")
-            text.text = "CONGRATULATIONS";
+            text.text = "CONGRATULATIONS. YOU REALLY HAVE A WAY WITH WORDS";
 
     }
 }

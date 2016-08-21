@@ -12,10 +12,10 @@ public class EndScreen : MonoBehaviour {
     {
         string lang = PlayerPrefs.GetString("IGJAM16_LANG", "de");
         if (lang == "de")
-            title.text = "ENDE";
+            title.text = "GRATULATION. DU BIST EIN WAHRER POET";
         else if(lang == "en")
         {
-            title.text = "THE END";
+            title.text = "CONGRATULATIONS: YOU REALLY HAVE A WAY WITH WORDS";
 
         }
     }
